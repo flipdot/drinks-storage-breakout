@@ -1,0 +1,213 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:wemos_mini
+LIBS:hx711
+LIBS:drinks_scale-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L WeMos_mini U2
+U 1 1 59B000FE
+P 5250 3150
+F 0 "U2" H 5250 3650 60  0000 C CNN
+F 1 "WeMos_mini" H 5250 2650 60  0000 C CNN
+F 2 "wemos d1:D1_mini_board" H 5800 2450 60  0001 C CNN
+F 3 "" H 5800 2450 60  0000 C CNN
+	1    5250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 59B00180
+P 4550 2600
+F 0 "#PWR01" H 4550 2450 50  0001 C CNN
+F 1 "+5V" H 4550 2740 50  0000 C CNN
+F 2 "" H 4550 2600 50  0001 C CNN
+F 3 "" H 4550 2600 50  0001 C CNN
+	1    4550 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 59B00196
+P 4250 3000
+F 0 "#PWR02" H 4250 2750 50  0001 C CNN
+F 1 "GND" H 4250 2850 50  0000 C CNN
+F 2 "" H 4250 3000 50  0001 C CNN
+F 3 "" H 4250 3000 50  0001 C CNN
+	1    4250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L hx711 U1
+U 1 1 59B004C9
+P 5200 1650
+F 0 "U1" H 4700 1250 60  0000 C CNN
+F 1 "hx711" H 5000 1750 60  0000 C CNN
+F 2 "hx71:hx711" H 5000 1750 60  0001 C CNN
+F 3 "" H 5000 1750 60  0001 C CNN
+	1    5200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2800 4550 2800
+Wire Wire Line
+	4550 2800 4550 2600
+Wire Wire Line
+	4750 2900 4250 2900
+Wire Wire Line
+	4250 2900 4250 3000
+$Comp
+L GND #PWR03
+U 1 1 59B0053C
+P 6600 1400
+F 0 "#PWR03" H 6600 1150 50  0001 C CNN
+F 1 "GND" H 6600 1250 50  0000 C CNN
+F 2 "" H 6600 1400 50  0001 C CNN
+F 3 "" H 6600 1400 50  0001 C CNN
+	1    6600 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2000 6700 2000
+Wire Wire Line
+	5700 2000 5700 1750
+Wire Wire Line
+	6600 1400 5700 1400
+Wire Wire Line
+	5700 1400 5700 1450
+Wire Wire Line
+	5750 3100 6600 3100
+Wire Wire Line
+	5750 3200 6600 3200
+Text Label 6600 3100 2    60   ~ 0
+data
+Text Label 6600 3200 2    60   ~ 0
+sck
+$Comp
+L +3V3 #PWR04
+U 1 1 59B005B6
+P 5950 2700
+F 0 "#PWR04" H 5950 2550 50  0001 C CNN
+F 1 "+3V3" H 5950 2840 50  0000 C CNN
+F 2 "" H 5950 2700 50  0001 C CNN
+F 3 "" H 5950 2700 50  0001 C CNN
+	1    5950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2700 5950 2800
+Wire Wire Line
+	5950 2800 5750 2800
+$Comp
+L +3V3 #PWR05
+U 1 1 59B005E3
+P 6700 2000
+F 0 "#PWR05" H 6700 1850 50  0001 C CNN
+F 1 "+3V3" H 6700 2140 50  0000 C CNN
+F 2 "" H 6700 2000 50  0001 C CNN
+F 3 "" H 6700 2000 50  0001 C CNN
+	1    6700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 J2
+U 1 1 59B006AE
+P 4300 1500
+F 0 "J2" H 4300 1750 50  0000 C CNN
+F 1 "CONN_01X04" V 4400 1500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch1.00mm" H 4300 1500 50  0001 C CNN
+F 3 "" H 4300 1500 50  0001 C CNN
+	1    4300 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 J1
+U 1 1 59B0088E
+P 1550 2650
+F 0 "J1" H 1550 2800 50  0000 C CNN
+F 1 "CONN_01X02" V 1650 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch1.00mm" H 1550 2650 50  0001 C CNN
+F 3 "" H 1550 2650 50  0001 C CNN
+	1    1550 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR06
+U 1 1 59B009A9
+P 2000 2500
+F 0 "#PWR06" H 2000 2350 50  0001 C CNN
+F 1 "+5V" H 2000 2640 50  0000 C CNN
+F 2 "" H 2000 2500 50  0001 C CNN
+F 3 "" H 2000 2500 50  0001 C CNN
+	1    2000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 59B009C4
+P 2000 2800
+F 0 "#PWR07" H 2000 2550 50  0001 C CNN
+F 1 "GND" H 2000 2650 50  0000 C CNN
+F 2 "" H 2000 2800 50  0001 C CNN
+F 3 "" H 2000 2800 50  0001 C CNN
+	1    2000 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2700 2000 2700
+Wire Wire Line
+	2000 2700 2000 2800
+Wire Wire Line
+	2000 2500 2000 2600
+Wire Wire Line
+	2000 2600 1750 2600
+Wire Wire Line
+	5700 1550 6550 1550
+Wire Wire Line
+	5700 1650 6550 1650
+Text Label 6550 1550 2    60   ~ 0
+data
+Text Label 6550 1650 2    60   ~ 0
+sck
+$EndSCHEMATC
